@@ -6,21 +6,18 @@
 
       <div class="ms_left">
 
-        <% UsersInfos1.forEach(function(data1){ %>
-
         <div class="publisher_info">
           <img src="" alt="">
           <p>publisher</p>
           <p>gps</p>
         </div>
 
-          <div class="published_picture">
+  <%    picture.forEach(function(data){ %>
+        <div class="published_picture">
+          <img src="<%= data.image_path %>" class="pPicture" alt="">
+        </div>
 
-                <img src="<%= data1.pictureDir %>" class="pPicture" alt="err">
-                <% console.log(data1.pictureDir); %>
-
-          </div>
-
+  <%    }); %>
 
         <div class="LikeComShare">
           <i class="far fa-heart"></i>
@@ -40,7 +37,7 @@
         <div class="addAComment">
           <p>...</p>
         </div>
-        <% }); %>
+
       </div>
 
     <div class="ms_right">
